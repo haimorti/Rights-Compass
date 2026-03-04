@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>בדיקת זכויות נכים</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        .hidden {
+            display: none;
+        }
+        input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h1 {
+            color: #2e7d32;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="{{ url_for('check_rights') }}" method="POST">
+            <h1>הזנת פרופיל לזכויות</h1>
+
+            <div class="form-group">
+                <label for="age">גיל:</label>
+                <input type="number" id="age" name="age" required min="0" max="120">
+            </div>
+
+            <div class="form-group">
+                <label>האם ישנם אחוזי נכות בגין לקות נפשית?</label>
+                <select name="mental_disability" required>
+                    <option value="">בחר</option>
+                    <option value="yes">כן</option>
+                    <option value="no">לא</option>
+                </select>
+            </div>
+
+            <div id="mentalPercentageGroup" class="form-group hidden">
+                <label>אחוזי נכות בגין נכות נפשית:</label>
+                <input type="number" name="mental_disability_percentage" min="0" max="100">
+            </div>
+
+            <div id="otherDisabilityGroup" class="form-group hidden">
+                <label>האם ישנם סעיפי לקות אחרים שאינם ליקויים נפשיים?</label>
+                <select name="other_disability">
+                    <option value="">בחר</option>
+                    <option value="yes">כן</option>
+                    <option value="no">לא</option>
+                </select>
+            </div>
+
+            <div id="generalPercentageGroup" class="form-group hidden">
+                <label>אחוזי נכות כללים (שאינם נכות נפשית):</label>
+                <input type="number" name="general_disability_percentage" min="0" max="100">
+            </div>
+
+            <div id="medicalQuestionsGroup" class="form-group hidden">
+                <div class="form-group">
+                    <label>האם סובל מפגיעת ראש?</label>
+                    <select name="head_injury">
+                        <option value="">בחר</option>
+                        <option value="yes">כן</option>
+                        <option value="no">לא</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>האם סובל מפגיעה בגפיים התחתונות?</label>
+                    <select name="lower_limbs_injury">
+                        <option value="">בחר</option>
+                        <option value="yes">כן</option>
+                        <option value="no">לא</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>האם הורה לילדים?</label>
+                <select name="is_parent" required>
+                    <option value="">בחר</option>
+                    <option value="yes">כן</option>
+                    <option value="no">לא</option>
+                </select>
+            </div>
+
+            <button type="submit">המשך לבדיקת זכויות</button>
+        </form>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // קבלת אלמנטים
+        const mentalDisabilitySelect = document.querySelector('[name="mental_disability"]');
+        const mentalPercentageGroup = document.getElementById('mentalPercentageGroup');
+        const otherDisabilityGroup = document.getElementById('otherDisabilityGroup');
+        const generalPercentageGroup = document.getElementById('generalPercentageGroup');
+        const medicalQuestionsGroup = document.getElementById('medicalQuestionsGroup');
+        
+        // טיפול בשינוי בשאלת הנכות הנפשית
+        mentalDisabilitySelect.addEventListener('change', function(e) {
+            const hasMentalDisability = e.target.value === 'yes';
+            
+            mentalPercentageGroup.classList.toggle('hidden', !hasMentalDisability);
+            otherDisabilityGroup.classList.toggle('hidden', !hasMentalDisability);
+            
+            if (!hasMentalDisability) {
+                // אם אין נכות נפשית, הצג את שדה אחוזי הנכות הכללית והשאלות הרפואיות
+                generalPercentageGroup.classList.remove('hidden');
+                medicalQuestionsGroup.classList.remove('hidden');
+            } else {
+                // אם יש נכות נפשית, הסתר את השדות האלו
+                generalPercentageGroup.classList.add('hidden');
+                medicalQuestionsGroup.classList.add('hidden');
+            }
+        });
+        
+        // טיפול בשינוי בשאלת הלקויות האחרות
+        const otherDisabilitySelect = document.querySelector('[name="other_disability"]');
+        otherDisabilitySelect?.addEventListener('change', function(e) {
+            const hasOtherDisability = e.target.value === 'yes';
+            
+            // הצג/הסתר את שדה אחוזי הנכות הכללית
+            generalPercentageGroup.classList.toggle('hidden', !hasOtherDisability);
+            // הצג/הסתר את השאלות הרפואיות
+            medicalQuestionsGroup.classList.toggle('hidden', !hasOtherDisability);
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תוצאות הזכויות</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .summary {
+            background-color: #e8f5e9;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .summary-title {
+            color: #2e7d32;
+            font-size: 1.4em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .user-data {
+            margin-bottom: 5px;
+        }
+        .main-category, .sub-category {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .main-category:hover, .sub-category:hover {
+            background-color: #f5f5f5;
+        }
+        .main-category {
+            background-color: #f8f9fa;
+        }
+        .sub-category {
+            margin-right: 20px;
+            background-color: #ffffff;
+        }
+        .content-section {
+            margin-right: 40px;
+            padding: 10px;
+            border-right: 2px solid #4CAF50;
+            display: none;
+        }
+        .expandable {
+            background-color: #f1f8e9;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .expandable-content {
+            display: none;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 0 0 5px 5px;
+            margin-top: -5px;
+        }
+        .meta-title {
+            color: #2e7d32;
+            font-size: 1.4em;
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f1f8e9;
+            border-radius: 5px;
+        }
+        .category-title {
+            font-weight: bold;
+            color: #1b5e20;
+        }
+        .sub-category-title {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        
+        .category-title {
+            font-weight: bold;
+            color: #1b5e20;
+            margin-bottom: 2px;  /* הקטנו מ-5px ל-2px */
+        }
+        .toggle-icon {
+            margin-left: 10px;
+            
+        }
+        .expanded .toggle-icon {
+            transform: rotate(90deg);
+        }
+        .back-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background-color: #6ca26f;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class="meta-title">סיכום הנתונים שהוזנו</h2>
+    
+    <div class="summary">
+
+       
+
+        
+        <div class="user-data">
+            אחוזי נכות {{ user_data.total_disability }}%{% if user_data.mental_disability > 0 %}, מתוכם {{ user_data.mental_disability }}% בגין לקות נפשית{% endif %}
+        </div>
+        <div class="user-data">
+            {% if user_data.is_parent %}הורה לילדים{% else %}אינו הורה לילדים{% endif %}
+        </div>
+        <div class="user-data">
+            {% if user_data.head_injury %}סובל מפגיעת ראש{% else %}אינו סובל מפגיעת ראש{% endif %}
+        </div>
+        <div class="user-data">
+            {% if user_data.lower_limbs_injury %}סובל מפגיעה בגפיים תחתונות{% else %}אינו סובל מפגיעה בגפיים תחתונות{% endif %}
+        </div>
+    </div>
+    
+        <h2 class="meta-title">במה תרצה לסייע</h2>
+
+    <div id="rights-container">
+        {% if rights %}
+            {% set categories = {} %}
+            {% for right in rights %}
+                {% set cat = right.details.מידע_להצגה.כותרות.ראשית %}
+                {% if cat not in categories %}
+                    {% set _ = categories.update({cat: []}) %}
+                {% endif %}
+                {% set _ = categories[cat].append(right) %}
+            {% endfor %}
+
+            {% for category, category_rights in categories.items() %}
+                <div class="main-category" onclick="toggleCategory(this)">
+                    <span class="toggle-icon">▶</span>
+                    <span class="category-title">{{ category }}</span>
+                </div>
+                <div class="content-section">
+                    {% for right in category_rights %}
+                    <div class="sub-category" onclick="toggleSubCategory(this)">
+                        <div style="display: flex">
+                            <span class="toggle-icon">▶</span>
+                            <div class="sub-category-title">
+                                <div style="display: flex; align-items: center;">
+                                    <div class="category-title">{{ right.details.מידע_להצגה.כותרות.משנית }}</div>
+                                </div>
+                                <div>{{ right.details.מידע_להצגה.כותרות.תיאור }}</div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="content-section">
+                            <!-- חלונות מתקפלים -->
+                            <div class="expandable" onclick="toggleExpanded(this)">
+                                <span class="toggle-icon">▶</span> הערות חשובות
+                            </div>
+                            <div class="expandable-content">
+                                {% for key, value in right.details.מידע_להצגה.הערות_חשובות.items() %}
+                                    <h4>{{ key | replace("_", " ") }}:</h4>
+                                    {% if value is mapping and value.סכומים is defined %}
+                                        {% for price_key, price_value in value.סכומים.items() %}
+                                            <div style="margin-right: 20px;">{{ price_key }}: {{ price_value }}</div>
+                                        {% endfor %}
+                                    {% elif value is string %}
+                                        {{ value }}
+                                    {% elif value is iterable and value is not mapping %}
+                                        {% for item in value %}
+                                            <div>{{ item }}</div>
+                                        {% endfor %}
+                                    {% else %}
+                                        {{ value }}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            
+                            <div class="expandable" onclick="toggleExpanded(this)">
+                                <span class="toggle-icon">▶</span> תהליך מימוש הזכות
+                            </div>
+                            <div class="expandable-content">
+                                {% for key, value in right.details.מידע_להצגה.תהליך_מימוש_הזכות.items() %}
+                                    <h4>{{ key | replace("_", " ") }}:</h4>
+                                    {% if value is string %}
+                                        {{ value }}
+                                    {% elif value is iterable %}
+                                        <ul>
+                                        {% for item in value %}
+                                            <li>{{ item }}</li>
+                                        {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+
+                            {% if right.details.מידע_להצגה.נהלים_למקרים_חריגים %}
+                            <div class="expandable" onclick="toggleExpanded(this)">
+                            <span class="toggle-icon">▶</span> חריגים
+                            </div>
+                            <div class="expandable-content">
+                                {% for key, value in right.details.מידע_להצגה.נהלים_למקרים_חריגים.items() %}
+                                <h4>{{ key | replace("_", " ") }}:</h4>
+                                {{ value }}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+
+                            <div class="expandable" onclick="toggleExpanded(this)">
+                                <span class="toggle-icon">▶</span> הנחיות לביצוע בסימולציה
+                            </div>
+                            <div class="expandable-content">
+                                {{ right.details.מידע_להצגה.הנחיות_לביצוע_בסימולציה }}
+                            </div>
+
+                            <div class="expandable" onclick="toggleExpanded(this)">
+                                <span class="toggle-icon">▶</span> מחלקה אחראית
+                            </div>
+                            <div class="expandable-content">
+                                {{ right.details.מידע_להצגה.מחלקה_אחראית }}
+                            </div>
+
+                            <div class="expandable" onclick="toggleExpanded(this)">
+                                <span class="toggle-icon">▶</span> קישורים שימושיים
+                            </div>
+                            <div class="expandable-content">
+                                <ul>
+                                {% for key, link in right.details.מידע_להצגה.קישורים_שימושיים.items() %}
+                                    <li><a href="{{ link.כתובת }}" target="_blank">{{ link.טקסט }}</a></li>
+                                {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        {% else %}
+            <p style="text-align: center; color: #d32f2f; font-size: 1.2em;">לא נמצאו זכויות התואמות את הקריטריונים שהוזנו.</p>
+        {% endif %}
+    </div>
+
+    <a href="/" class="back-button">חזרה לטופס</a>
+
+    <script>
+        function toggleCategory(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.toggle-icon');
+            
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                icon.textContent = '▼';
+                element.classList.add('expanded');
+            } else {
+                content.style.display = 'none';
+                icon.textContent = '▶';
+                element.classList.remove('expanded');
+            }
+        }
+
+        function toggleSubCategory(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.toggle-icon');
+            
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                icon.textContent = '▼';  // פשוט מחליף למשולש שמצביע למטה
+            } else {
+                content.style.display = 'none';
+                icon.textContent = '▶';  // חזרה למשולש שמצביע ימינה
+            }
+        }
+
+        function toggleExpanded(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.toggle-icon');
+            
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                icon.textContent = '▼';
+                element.classList.add('expanded');
+            } else {
+                content.style.display = 'none';
+                icon.textContent = '▶';
+                element.classList.remove('expanded');
+            }
+        }
+    </script>
+</body>
+</html>

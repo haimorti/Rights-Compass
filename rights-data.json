@@ -1,0 +1,688 @@
+{
+    "eligibilityCriteria": [
+        {
+            "category": "תמיכה נפשית ורגשית - טיפול רגשי",
+            "domain": "תמיכה נפשית ורגשית",
+            "subDomain": "טיפול רגשי",
+            "subDomainCode": 1,
+            "subDomainPriority": 3,
+            "rightId": 1,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 10,
+            "maxPercentage": 49,
+            "requiresChildren": false
+        },
+        {
+            "category": "תמיכה נפשית ורגשית - טיפול רגשי",
+            "domain": "תמיכה נפשית ורגשית",
+            "subDomain": "טיפול רגשי",
+            "subDomainCode": 1,
+            "subDomainPriority": 3,
+            "rightId": 2,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 50,
+            "maxPercentage": 99,
+            "requiresChildren": false
+        },
+        {
+            "category": "תמיכה נפשית ורגשית - טיפול רגשי",
+            "domain": "תמיכה נפשית ורגשית",
+            "subDomain": "טיפול רגשי",
+            "subDomainCode": 1,
+            "subDomainPriority": 3,
+            "rightId": 3,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 100,
+            "maxPercentage": 200,
+            "requiresChildren": false
+        },
+        {
+            "category": "תמיכה נפשית ורגשית - טיפול רגשי",
+            "domain": "תמיכה נפשית ורגשית",
+            "subDomain": "טיפול רגשי", 
+            "subDomainCode": 1,
+            "subDomainPriority": 1,
+            "rightId": 4,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 10,
+            "maxPercentage": 200,
+            "requiresChildren": false
+        },
+        {
+            "category": "תמיכה נפשית ורגשית - טיפול רגשי",
+            "domain": "תמיכה נפשית ורגשית",
+            "subDomain": "טיפול רגשי",
+            "subDomainCode": 1,
+            "subDomainPriority": 2,
+            "rightId": 5,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 10,
+            "maxPercentage": 100,
+            "requiresChildren": false
+        },
+
+        
+        
+        {
+            "category": "תמיכה נפשית ורגשית - רפואה משלימה",
+            "domain": "רפואה משלימה וטיפולים אלטרנטיביים",
+            "subDomain": "טיפול אלטרנטיבי",
+            "subDomainCode": 2,
+            "subDomainPriority": 1,
+            "rightId": 6,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 20,
+            "maxPercentage": 200,
+            "requiresChildren": false
+        },
+        {
+            "category": "תמיכה נפשית ורגשית - רפואה משלימה",
+            "domain": "רפואה משלימה וטיפולים אלטרנטיביים",
+            "subDomain": "טיפול אלטרנטיבי",
+            "subDomainCode": 2,
+            "subDomainPriority": 2,
+            "rightId": 7,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 20,
+            "maxPercentage": 100,
+            "requiresChildren": false
+        },
+
+        
+        {
+            "category": "בטיפול תומך במשפחה - טיפול משפחתי",
+            "domain": "בטיפול תומך במשפחה",
+            "subDomain": "טיפול משפחתי",
+            "subDomainCode": 3,
+            "subDomainPriority": 5,
+            "rightId": 8,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 10,
+            "maxPercentage": 49,
+            "requiresChildren": false
+        },
+        {
+            "category": "בטיפול תומך במשפחה - טיפול משפחתי",
+            "domain": "בטיפול תומך במשפחה",
+            "subDomain": "טיפול משפחתי", 
+            "subDomainCode": 3,
+            "subDomainPriority": 4,
+            "rightId": 9,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 50,
+            "maxPercentage": 99,
+            "requiresChildren": false
+        },
+        {
+            "category": "בטיפול תומך במשפחה - טיפול משפחתי",
+            "domain": "בטיפול תומך במשפחה",
+            "subDomain": "טיפול משפחתי",
+            "subDomainCode": 3,
+            "subDomainPriority": 3,
+            "rightId": 10,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 100,
+            "maxPercentage": 200,
+            "requiresChildren": false
+        },
+        {
+            "category": "בטיפול תומך במשפחה - טיפול משפחתי",
+            "domain": "בטיפול תומך במשפחה",
+            "subDomain": "טיפול משפחתי",
+            "subDomainCode": 3,
+            "subDomainPriority": 2,
+            "rightId": 11,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 10,
+            "maxPercentage": 200,
+            "requiresChildren": false
+        },
+        {
+            "category": "בטיפול תומך במשפחה - טיפול משפחתי",
+            "domain": "בטיפול תומך במשפחה",
+            "subDomain": "טיפול משפחתי",
+            "subDomainCode": 3,
+            "subDomainPriority": 1,
+            "rightId": 12,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 10,
+            "maxPercentage": 100,
+            "requiresChildren": false
+        },
+        
+        {
+            "category": "בטיפול תומך במשפחה - טיפול רגשי לבן/בת זוג או הורה",
+            "domain": "בטיפול תומך במשפחה",
+            "subDomain": "טיפול רגשי לבן/בת זוג או הורה",
+            "subDomainCode": 4,
+            "subDomainPriority": 4,
+            "rightId": 13,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 50,
+            "maxPercentage": 99,
+            "requiresChildren": false
+        },
+        {
+            "category": "בטיפול תומך במשפחה - טיפול רגשי לבן/בת זוג או הורה",
+            "domain": "בטיפול תומך במשפחה",
+            "subDomain": "טיפול רגשי לבן/בת זוג או הורה",
+            "subDomainCode": 4,
+            "subDomainPriority": 3,
+            "rightId": 14,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 100,
+            "maxPercentage": 200,
+            "requiresChildren": false
+        },
+        {
+            "category": "בטיפול תומך במשפחה - טיפול רגשי לבן/בת זוג או הורה",
+            "domain": "בטיפול תומך במשפחה",
+            "subDomain": "טיפול רגשי לבן/בת זוג או הורה",
+            "subDomainCode": 4,
+            "subDomainPriority": 2,
+            "rightId": 15,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 10,
+            "maxPercentage": 200,
+            "requiresChildren": false
+        },
+        {
+            "category": "בטיפול תומך במשפחה - טיפול רגשי לבן/בת זוג או הורה",
+            "domain": "בטיפול תומך במשפחה",
+            "subDomain": "טיפול רגשי לבן/בת זוג או הורה",
+            "subDomainCode": 4,
+            "subDomainPriority": 1,
+            "rightId": 16,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 10,
+            "maxPercentage": 100,
+            "requiresChildren": false
+        },
+
+        
+        {
+            "category": "זכויות ילדי נכים - טיפול רגשי/טיפול באומנות",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "טיפול רגשי/טיפול באומנות/בע\"ח",
+            "subDomainCode": 5,
+            "subDomainPriority": 1,
+            "rightId": 17,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 20,
+            "maxPercentage": 200,
+            "requiresChildren": true
+        },
+        {
+            "category": "זכויות ילדי נכים - טיפול רגשי/טיפול באומנות",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "טיפול רגשי/טיפול באומנות/בע\"ח",
+            "subDomainCode": 5,
+            "subDomainPriority": 2,
+            "rightId": 18,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 20,
+            "maxPercentage": 100,
+            "requiresChildren": true
+        },
+
+        
+        {
+            "category": "זכויות ילדי נכים - טיפול אלטרנטיבי",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "טיפול אלטרנטיבי (כחלופה לטיפול רגשי)",
+            "subDomainCode": 6,
+            "subDomainPriority": 1,
+            "rightId": 19,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 20,
+            "maxPercentage": 200,
+            "requiresChildren": true
+        },
+        {
+            "category": "זכויות ילדי נכים - טיפול אלטרנטיבי",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "טיפול אלטרנטיבי (כחלופה לטיפול רגשי)",
+            "subDomainCode": 6,
+            "subDomainPriority": 2,
+            "rightId": 20,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 20,
+            "maxPercentage": 100,
+            "requiresChildren": true
+        },
+
+        
+        {
+            "category": "זכויות ילדי נכים - חונכות",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "חונכות",
+            "subDomainCode": 7,
+            "subDomainPriority": 1,
+            "rightId": 21,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 10,
+            "maxPercentage": 200,
+            "requiresChildren": true
+        },
+        {
+            "category": "זכויות ילדי נכים - חונכות",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "חונכות",
+            "subDomainCode": 7,
+            "subDomainPriority": 2,
+            "rightId": 22,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 10,
+            "maxPercentage": 200,
+            "requiresChildren": true
+        },
+
+        
+        {
+            "category": "דיור - מענק לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "מענק לרכישת דירה ראשונה",
+            "subDomainCode": 8,
+            "subDomainPriority": 8,
+            "rightId": 23,
+            "disabilityType": "אחוזי נכות בגין פגיעה בגפיים התחתונות",
+            "minPercentage": 35,
+            "maxPercentage": 49,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - מענק לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "מענק לרכישת דירה ראשונה",
+            "subDomainCode": 8,
+            "subDomainPriority": 7,
+            "rightId": 24,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 35,
+            "maxPercentage": 49,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - מענק לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "מענק לרכישת דירה ראשונה",
+            "subDomainCode": 8,
+            "subDomainPriority": 6,
+            "rightId": 25,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 35,
+            "maxPercentage": 49,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - מענק לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "מענק לרכישת דירה ראשונה",
+            "subDomainCode": 8,
+            "subDomainPriority": 5,
+            "rightId": 26,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 50,
+            "maxPercentage": 89,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - מענק לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "מענק לרכישת דירה ראשונה",
+            "subDomainCode": 8,
+            "subDomainPriority": 4,
+            "rightId": 27,
+            "disabilityType": "אחוזי נכות בגין פגיעה בגפיים התחתונות",
+            "minPercentage": 50,
+            "maxPercentage": 89,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - מענק לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "מענק לרכישת דירה ראשונה",
+            "subDomainCode": 8,
+            "subDomainPriority": 3,
+            "rightId": 28,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 50,
+            "maxPercentage": 89,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - מענק לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "מענק לרכישת דירה ראשונה",
+            "subDomainCode": 8,
+            "subDomainPriority": 2,
+            "rightId": 29,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 50,
+            "maxPercentage": 89,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - מענק לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "מענק לרכישת דירה ראשונה",
+            "subDomainCode": 8,
+            "subDomainPriority": 1,
+            "rightId": 30,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 90,
+            "maxPercentage": 100,
+            "requiresChildren": false
+        },
+
+        
+        {
+            "category": "דיור - מענק להחלפת דירה",
+            "domain": "דיור",
+            "subDomain": "מענק להחלפת דירה",
+            "subDomainCode": 9,
+            "subDomainPriority": 4,
+            "rightId": 31,
+            "disabilityType": "אחוזי נכות בגין פגיעה בגפיים התחתונות",
+            "minPercentage": 35,
+            "maxPercentage": 200,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - מענק להחלפת דירה",
+            "domain": "דיור",
+            "subDomain": "מענק להחלפת דירה",
+            "subDomainCode": 9,
+            "subDomainPriority": 3,
+            "rightId": 32,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 35,
+            "maxPercentage": 200,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - מענק להחלפת דירה",
+            "domain": "דיור",
+            "subDomain": "מענק להחלפת דירה",
+            "subDomainCode": 9,
+            "subDomainPriority": 2,
+            "rightId": 33,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 35,
+            "maxPercentage": 200,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - מענק להחלפת דירה",
+            "domain": "דיור",
+            "subDomain": "מענק להחלפת דירה",
+            "subDomainCode": 9,
+            "subDomainPriority": 1,
+            "rightId": 34,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 90,
+            "maxPercentage": 100,
+            "requiresChildren": false
+        },
+
+        
+        {
+            "category": "דיור - הלוואה לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "הלוואה לרכישת דירה ראשונה",
+            "subDomainCode": 10,
+            "subDomainPriority": 9,
+            "rightId": 35,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 20,
+            "maxPercentage": 29,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "הלוואה לרכישת דירה ראשונה",
+            "subDomainCode": 10,
+            "subDomainPriority": 8,
+            "rightId": 36,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 30,
+            "maxPercentage": 39,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "הלוואה לרכישת דירה ראשונה",
+            "subDomainCode": 10,
+            "subDomainPriority": 7,
+            "rightId": 37,
+            "disabilityType": "אחוזי נכות בגין פגיעה בגפיים התחתונות",
+            "minPercentage": 30,
+            "maxPercentage": 39,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "הלוואה לרכישת דירה ראשונה",
+            "subDomainCode": 10,
+            "subDomainPriority": 6,
+            "rightId": 38,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 30,
+            "maxPercentage": 39,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "הלוואה לרכישת דירה ראשונה",
+            "subDomainCode": 10,
+            "subDomainPriority": 5,
+            "rightId": 39,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 30,
+            "maxPercentage": 39,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "הלוואה לרכישת דירה ראשונה",
+            "subDomainCode": 10,
+            "subDomainPriority": 4,
+            "rightId": 40,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 40,
+            "maxPercentage": 49,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "הלוואה לרכישת דירה ראשונה",
+            "subDomainCode": 10,
+            "subDomainPriority": 3,
+            "rightId": 41,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 50,
+            "maxPercentage": 69,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "הלוואה לרכישת דירה ראשונה",
+            "subDomainCode": 10,
+            "subDomainPriority": 2,
+            "rightId": 42,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 70,
+            "maxPercentage": 99,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה לרכישת דירה ראשונה",
+            "domain": "דיור",
+            "subDomain": "הלוואה לרכישת דירה ראשונה",
+            "subDomainCode": 10,
+            "subDomainPriority": 1,
+            "rightId": 43,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 100,
+            "maxPercentage": 200,
+            "requiresChildren": false
+        },
+
+        
+        {
+            "category": "דיור - הלוואה להחלפת דירה",
+            "domain": "דיור",
+            "subDomain": "הלוואה להחלפת דירה",
+            "subDomainCode": 11,
+            "subDomainPriority": 9,
+            "rightId": 44,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 20,
+            "maxPercentage": 29,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה להחלפת דירה",
+            "domain": "דיור",
+            "subDomain": "הלוואה להחלפת דירה",
+            "subDomainCode": 11,
+            "subDomainPriority": 8,
+            "rightId": 45,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 30,
+            "maxPercentage": 39,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה להחלפת דירה",
+            "domain": "דיור",
+            "subDomain": "הלוואה להחלפת דירה",
+            "subDomainCode": 11,
+            "subDomainPriority": 7,
+            "rightId": 46,
+            "disabilityType": "אחוזי נכות בגין פגיעה בגפיים התחתונות",
+            "minPercentage": 30,
+            "maxPercentage": 39,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה להחלפת דירה",
+            "domain": "דיור",
+            "subDomain": "הלוואה להחלפת דירה",
+            "subDomainCode": 11,
+            "subDomainPriority": 6,
+            "rightId": 47,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 30,
+            "maxPercentage": 39,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה להחלפת דירה",
+            "domain": "דיור",
+            "subDomain": "הלוואה להחלפת דירה",
+            "subDomainCode": 11,
+            "subDomainPriority": 5,
+            "rightId": 48,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 30,
+            "maxPercentage": 39,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה להחלפת דירה",
+            "domain": "דיור",
+            "subDomain": "הלוואה להחלפת דירה",
+            "subDomainCode": 11,
+            "subDomainPriority": 4,
+            "rightId": 49,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 40,
+            "maxPercentage": 49,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה להחלפת דירה",
+            "domain": "דיור",
+            "subDomain": "הלוואה להחלפת דירה",
+            "subDomainCode": 11,
+            "subDomainPriority": 3,
+            "rightId": 50,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 50,
+            "maxPercentage": 69,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה להחלפת דירה",
+            "domain": "דיור",
+            "subDomain": "הלוואה להחלפת דירה",
+            "subDomainCode": 11,
+            "subDomainPriority": 2,
+            "rightId": 51,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 70,
+            "maxPercentage": 99,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - הלוואה להחלפת דירה",
+            "domain": "דיור",
+            "subDomain": "הלוואה להחלפת דירה",
+            "subDomainCode": 11,
+            "subDomainPriority": 1,
+            "rightId": 52,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 100,
+            "maxPercentage": 200,
+            "requiresChildren": false
+        },
+
+        
+        {
+            "category": "דיור - סיוע במימון שכר דירה",
+            "domain": "דיור",
+            "subDomain": "סיוע במימון שכר דירה",
+            "subDomainCode": 12,
+            "subDomainPriority": 2,
+            "rightId": 53,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 50,
+            "maxPercentage": 99,
+            "requiresChildren": false
+        },
+        {
+            "category": "דיור - סיוע במימון שכר דירה",
+            "domain": "דיור",
+            "subDomain": "סיוע במימון שכר דירה",
+            "subDomainCode": 12,
+            "subDomainPriority": 1,
+            "rightId": 54,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 100,
+            "maxPercentage": 200,
+            "requiresChildren": false
+        },
+
+        
+        {
+            "category": "ניידות - סיוע במימון ואחזקת רכב",
+            "domain": "ניידות",
+            "subDomain": "סיוע במימון ואחזקת רכב (רכב רפואי)",
+            "subDomainCode": 13,
+            "subDomainPriority": 1,
+            "rightId": 55,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 50,
+            "maxPercentage": 99,
+            "requiresChildren": false
+        }
+    ]
+}
