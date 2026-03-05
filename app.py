@@ -85,7 +85,15 @@ def check_rights():
                     # בדיקת דרישת הורות
                     if not right['requiresChildren'] or is_parent:
                         print("דרישת הורות תואמת")
-                        matching_rights.append(right)
+
+                        # בדיקת טווח גיל (אם מוגדר בזכות)
+                        min_age = right.get('minAge', 0)
+                        max_age = right.get('maxAge', 120)
+                        if min_age <= age <= max_age:
+                            print(f"גיל תואם: {min_age} <= {age} <= {max_age}")
+                            matching_rights.append(right)
+                        else:
+                            print(f"גיל לא תואם: {age} לא בטווח {min_age}-{max_age}")
                     else:
                         print("לא עומד בדרישת הורות")
                 else:

@@ -39,7 +39,7 @@
         {
             "category": "תמיכה נפשית ורגשית - טיפול רגשי",
             "domain": "תמיכה נפשית ורגשית",
-            "subDomain": "טיפול רגשי", 
+            "subDomain": "טיפול רגשי",
             "subDomainCode": 1,
             "subDomainPriority": 1,
             "rightId": 4,
@@ -60,9 +60,6 @@
             "maxPercentage": 100,
             "requiresChildren": false
         },
-
-        
-        
         {
             "category": "תמיכה נפשית ורגשית - רפואה משלימה",
             "domain": "רפואה משלימה וטיפולים אלטרנטיביים",
@@ -87,8 +84,6 @@
             "maxPercentage": 100,
             "requiresChildren": false
         },
-
-        
         {
             "category": "בטיפול תומך במשפחה - טיפול משפחתי",
             "domain": "בטיפול תומך במשפחה",
@@ -104,7 +99,7 @@
         {
             "category": "בטיפול תומך במשפחה - טיפול משפחתי",
             "domain": "בטיפול תומך במשפחה",
-            "subDomain": "טיפול משפחתי", 
+            "subDomain": "טיפול משפחתי",
             "subDomainCode": 3,
             "subDomainPriority": 4,
             "rightId": 9,
@@ -149,7 +144,6 @@
             "maxPercentage": 100,
             "requiresChildren": false
         },
-        
         {
             "category": "בטיפול תומך במשפחה - טיפול רגשי לבן/בת זוג או הורה",
             "domain": "בטיפול תומך במשפחה",
@@ -198,8 +192,6 @@
             "maxPercentage": 100,
             "requiresChildren": false
         },
-
-        
         {
             "category": "זכויות ילדי נכים - טיפול רגשי/טיפול באומנות",
             "domain": "זכויות ילדי נכים",
@@ -210,7 +202,9 @@
             "disabilityType": "אחוזי נכות בגין פגיעת ראש",
             "minPercentage": 20,
             "maxPercentage": 200,
-            "requiresChildren": true
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
         },
         {
             "category": "זכויות ילדי נכים - טיפול רגשי/טיפול באומנות",
@@ -222,10 +216,10 @@
             "disabilityType": "אחוזי נכות נפשיים",
             "minPercentage": 20,
             "maxPercentage": 100,
-            "requiresChildren": true
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
         },
-
-        
         {
             "category": "זכויות ילדי נכים - טיפול אלטרנטיבי",
             "domain": "זכויות ילדי נכים",
@@ -236,7 +230,9 @@
             "disabilityType": "אחוזי נכות בגין פגיעת ראש",
             "minPercentage": 20,
             "maxPercentage": 200,
-            "requiresChildren": true
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
         },
         {
             "category": "זכויות ילדי נכים - טיפול אלטרנטיבי",
@@ -248,10 +244,10 @@
             "disabilityType": "אחוזי נכות נפשיים",
             "minPercentage": 20,
             "maxPercentage": 100,
-            "requiresChildren": true
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
         },
-
-        
         {
             "category": "זכויות ילדי נכים - חונכות",
             "domain": "זכויות ילדי נכים",
@@ -262,7 +258,9 @@
             "disabilityType": "אחוזי נכות בגין פגיעת ראש",
             "minPercentage": 10,
             "maxPercentage": 200,
-            "requiresChildren": true
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
         },
         {
             "category": "זכויות ילדי נכים - חונכות",
@@ -274,10 +272,10 @@
             "disabilityType": "אחוזי נכות נפשיים",
             "minPercentage": 10,
             "maxPercentage": 200,
-            "requiresChildren": true
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
         },
-
-        
         {
             "category": "דיור - מענק לרכישת דירה ראשונה",
             "domain": "דיור",
@@ -374,8 +372,6 @@
             "maxPercentage": 100,
             "requiresChildren": false
         },
-
-        
         {
             "category": "דיור - מענק להחלפת דירה",
             "domain": "דיור",
@@ -424,8 +420,6 @@
             "maxPercentage": 100,
             "requiresChildren": false
         },
-
-        
         {
             "category": "דיור - הלוואה לרכישת דירה ראשונה",
             "domain": "דיור",
@@ -534,8 +528,6 @@
             "maxPercentage": 200,
             "requiresChildren": false
         },
-
-        
         {
             "category": "דיור - הלוואה להחלפת דירה",
             "domain": "דיור",
@@ -644,8 +636,6 @@
             "maxPercentage": 200,
             "requiresChildren": false
         },
-
-        
         {
             "category": "דיור - סיוע במימון שכר דירה",
             "domain": "דיור",
@@ -670,8 +660,6 @@
             "maxPercentage": 200,
             "requiresChildren": false
         },
-
-        
         {
             "category": "ניידות - סיוע במימון ואחזקת רכב",
             "domain": "ניידות",
@@ -683,6 +671,118 @@
             "minPercentage": 50,
             "maxPercentage": 99,
             "requiresChildren": false
+        },
+        {
+            "category": "זכויות ילדי נכים - שיעורים פרטיים",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "שיעורים פרטיים",
+            "subDomainCode": 14,
+            "subDomainPriority": 2,
+            "rightId": 56,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 0,
+            "maxPercentage": 19,
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
+        },
+        {
+            "category": "זכויות ילדי נכים - שיעורים פרטיים",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "שיעורים פרטיים",
+            "subDomainCode": 14,
+            "subDomainPriority": 1,
+            "rightId": 57,
+            "disabilityType": "אחוזי נכות כוללים",
+            "minPercentage": 20,
+            "maxPercentage": 200,
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
+        },
+        {
+            "category": "זכויות ילדי נכים - שיעורים פרטיים",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "שיעורים פרטיים",
+            "subDomainCode": 14,
+            "subDomainPriority": 2,
+            "rightId": 58,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 0,
+            "maxPercentage": 19,
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
+        },
+        {
+            "category": "זכויות ילדי נכים - שיעורים פרטיים",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "שיעורים פרטיים",
+            "subDomainCode": 14,
+            "subDomainPriority": 1,
+            "rightId": 59,
+            "disabilityType": "אחוזי נכות נפשיים",
+            "minPercentage": 20,
+            "maxPercentage": 200,
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
+        },
+        {
+            "category": "זכויות ילדי נכים - שיעורים פרטיים",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "שיעורים פרטיים",
+            "subDomainCode": 14,
+            "subDomainPriority": 2,
+            "rightId": 60,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 0,
+            "maxPercentage": 19,
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
+        },
+        {
+            "category": "זכויות ילדי נכים - שיעורים פרטיים",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "שיעורים פרטיים",
+            "subDomainCode": 14,
+            "subDomainPriority": 1,
+            "rightId": 61,
+            "disabilityType": "אחוזי נכות בגין פגיעת ראש",
+            "minPercentage": 20,
+            "maxPercentage": 200,
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
+        },
+        {
+            "category": "זכויות ילדי נכים - שיעורים פרטיים",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "שיעורים פרטיים",
+            "subDomainCode": 14,
+            "subDomainPriority": 2,
+            "rightId": 62,
+            "disabilityType": "אחוזי נכות בגין פגיעה בגפיים התחתונות",
+            "minPercentage": 0,
+            "maxPercentage": 19,
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
+        },
+        {
+            "category": "זכויות ילדי נכים - שיעורים פרטיים",
+            "domain": "זכויות ילדי נכים",
+            "subDomain": "שיעורים פרטיים",
+            "subDomainCode": 14,
+            "subDomainPriority": 1,
+            "rightId": 63,
+            "disabilityType": "אחוזי נכות בגין פגיעה בגפיים התחתונות",
+            "minPercentage": 20,
+            "maxPercentage": 200,
+            "requiresChildren": true,
+            "minAge": 0,
+            "maxAge": 18
         }
     ]
 }
