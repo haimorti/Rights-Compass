@@ -36,6 +36,7 @@ def check_rights():
         head_injury = request.form.get('head_injury') == 'yes'
         lower_limbs_injury = request.form.get('lower_limbs_injury') == 'yes'
         is_parent = request.form.get('is_parent') == 'yes'
+        is_minor = age < 18
 
         print(f"""
         נתונים שעובדו:
@@ -45,6 +46,7 @@ def check_rights():
         פגיעת ראש: {head_injury}
         פגיעה בגפיים: {lower_limbs_injury}
         הורה: {is_parent}
+        קטין/ה מתחת לגיל 18: {is_minor}
         """)
 
         # קריאת קובץ הזכויות
@@ -82,9 +84,9 @@ def check_rights():
                 if right['minPercentage'] <= total_disability <= right['maxPercentage']:
                     print(f"אחוזי נכות תואמים: {right['minPercentage']} <= {total_disability} <= {right['maxPercentage']}")
                     
-                    # בדיקת דרישת הורות
-                    if not right['requiresChildren'] or is_parent:
-                        print("דרישת הורות תואמת")
+                    # בדיקת זכאות שמיועדת לילדים
+                    if not right['requiresChildren'] or is_minor:
+                        print("דרישת ילדים תואמת")
 
                         # בדיקת טווח גיל (אם מוגדר בזכות)
                         min_age = right.get('minAge', 0)
@@ -95,7 +97,7 @@ def check_rights():
                         else:
                             print(f"גיל לא תואם: {age} לא בטווח {min_age}-{max_age}")
                     else:
-                        print("לא עומד בדרישת הורות")
+                        print("לא עומד בדרישת ילדים (מיועד לקטינים בלבד)")
                 else:
                     print(f"אחוזי נכות לא תואמים: {total_disability}")
             else:

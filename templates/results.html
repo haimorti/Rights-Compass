@@ -122,10 +122,9 @@
     <h2 class="meta-title">סיכום הנתונים שהוזנו</h2>
     
     <div class="summary">
-
-       
-
-        
+        <div class="user-data">
+            גיל: {{ user_data.age }}
+        </div>
         <div class="user-data">
             אחוזי נכות {{ user_data.total_disability }}%{% if user_data.mental_disability > 0 %}, מתוכם {{ user_data.mental_disability }}% בגין לקות נפשית{% endif %}
         </div>
